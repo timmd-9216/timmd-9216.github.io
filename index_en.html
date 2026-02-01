@@ -5,57 +5,122 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Research and Mathematical Models Workshop - FIUBA</title>
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:2rem;color:#111}
-    header{border-bottom:1px solid #ddd;padding-bottom:1rem;margin-bottom:1rem}
-    nav a{margin-right:1rem}
-    .hero{background:#f7f7fb;padding:1rem;border-radius:8px}
-    .placeholder{color:#666;font-style:italic}
+    :root{--accent:#375aeb;--muted:#6b7280;--bg:#0f172a}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:0;color:#0b1220;background:#fff}
+    .container{max-width:1000px;margin:2rem auto;padding:0 1rem}
+    header{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .site-title{line-height:1}
+    .site-title h1{margin:0;font-size:1.25rem}
+    .site-title p{margin:0;color:var(--muted);font-size:0.95rem}
+    nav a{color:var(--accent);text-decoration:none;margin-left:1rem;font-weight:600}
+
+    .hero{display:flex;flex-direction:column;gap:0.5rem;background:linear-gradient(135deg,#f3f4ff 0%, #ffffff 100%);border-radius:12px;padding:1.25rem;margin:1.5rem 0}
+    .hero h2{margin:0;font-size:1.5rem}
+    .lead{color:#111;max-width:64ch}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:1.25rem}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+    .card{background:#fff;border:1px solid #eef2ff;padding:1rem;border-radius:10px}
+    .muted{color:var(--muted)}
+
+    .instructors{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+    @media (max-width:900px){.instructors{grid-template-columns:1fr}}
+    .instructor{background:linear-gradient(180deg,#fff,#fbfdff);padding:1rem;border-radius:10px;border:1px solid #e6eef9;display:flex;gap:0.75rem;align-items:flex-start}
+    .instructor img{width:72px;height:72px;border-radius:8px;object-fit:cover;border:1px solid #e9eef9}
+    .name{font-weight:700;margin-bottom:0.25rem}
+    .bio{font-size:0.95rem;color:#222}
+    .link{display:inline-block;margin-top:0.75rem;color:var(--accent);font-weight:600;text-decoration:none}
+
+    footer{margin-top:2rem;padding-top:1rem;border-top:1px solid #eee;color:var(--muted);font-size:0.9rem}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Research and Mathematical Models Workshop</h1>
-    <p><strong>Faculty of Engineering, University of Buenos Aires (FIUBA)</strong></p>
-    <nav>
-      <a href="index.html">Español</a>
-      <a href="#syllabus">Syllabus</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <div class="site-title">
+        <h1>Research and Mathematical Models Workshop</h1>
+        <p>Faculty of Engineering, University of Buenos Aires (FIUBA)</p>
+      </div>
+      <nav>
+        <a href="index.html">Español</a>
+        <a href="#syllabus">Syllabus</a>
+        <a href="#instructors">Instructors</a>
+      </nav>
+    </header>
 
-  <main>
     <section class="hero">
       <h2>Welcome</h2>
-      <p class="placeholder">Short course description (placeholder). Add objectives, target audience and a synopsis here.</p>
+      <p class="lead">A seminar that explores research-driven approaches to modeling, data systems, and generative AI. We combine rigorous methods with hands-on projects to bridge academic foundations and applied systems.</p>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem">
+        <a href="#syllabus" class="link">Syllabus</a>
+        <a href="#instructors" class="link">Meet the instructors</a>
+      </div>
     </section>
 
-    <section id="details">
-      <h3>Course details</h3>
-      <ul>
-        <li><strong>Code / Year:</strong> <span class="placeholder">[Add code and year]</span></li>
-        <li><strong>Term:</strong> <span class="placeholder">[Add term]</span></li>
-        <li><strong>Instructors:</strong> <span class="placeholder">[Instructor names]</span></li>
-      </ul>
+    <div class="grid">
+      <main>
+        <section id="syllabus" class="card">
+          <h3>Syllabus (summary)</h3>
+          <p class="muted">Placeholder: replace with topics, assessment methods, schedule and reading list.</p>
+          <ul>
+            <li>Topic blocks: modeling, generative AI, evaluation, case studies</li>
+            <li>Assessment: projects, presentations, and participation</li>
+            <li>Format: seminars, project check-ins, guest talks</li>
+          </ul>
+        </section>
+
+        <section id="resources" class="card" style="margin-top:1rem">
+          <h3>Resources</h3>
+          <p class="muted">Links and materials will be added here. Use the repository for slides, notebooks, and datasets.</p>
+        </section>
+      </main>
+
+      <aside>
+        <div class="card">
+          <h4>Course details</h4>
+          <p class="muted">Code / Year: <span class="muted">[Add]</span><br/>Term: <span class="muted">[Add]</span></p>
+          <h4 style="margin-top:0.75rem">Contact</h4>
+          <p class="muted">Email: <span class="muted">professor@example.com</span></p>
+        </div>
+      </aside>
+    </div>
+
+    <section id="instructors" style="margin-top:1.5rem">
+      <h3>Instructors</h3>
+      <div class="instructors">
+        <div class="instructor">
+          <img src="assets/images/xavier.jpeg" alt="Xavier González">
+          <div>
+            <div class="name">Xavier González</div>
+            <div class="bio">AI-driven problem solver blending data science, generative AI, and creative systems. Senior Data Scientist with a strong academic backbone (PhD) and hands-on leadership in GenAI, social media analysis, and AI-powered products. Known for connecting rigorous modeling with real-world impact — from enterprise-scale systems to experimental art and music tech.</div>
+            <a class="link" href="https://www.linkedin.com/in/xavierign/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="instructor">
+          <img src="assets/images/hernan.jpeg" alt="Horacio Díaz">
+          <div>
+            <div class="name">Horacio Díaz</div>
+            <div class="bio">Seasoned technology and innovation leader with deep experience turning complex ideas into scalable, real-world solutions. Strong focus on digital transformation, data strategy, and cross-functional leadership, bridging business, engineering, and analytics with clarity and execution.</div>
+            <a class="link" href="https://www.linkedin.com/in/hordia/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="instructor">
+          <img src="assets/images/juan.jpeg" alt="Juan Cruz Camacho">
+          <div>
+            <div class="name">Juan Cruz Camacho</div>
+            <div class="bio">Full-stack data and visualization specialist passionate about turning messy data into clear, compelling insights. Strong background in analytics, dashboards, and interactive visual systems, with an eye for design and storytelling that makes data both useful and engaging.</div>
+            <a class="link" href="https://www.linkedin.com/in/juancruzcamacho/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="syllabus">
-      <h3>Syllabus (summary)</h3>
-      <p class="placeholder">Section with topic list, assessments and schedule. Replace with real syllabus content.</p>
-    </section>
-
-    <section id="resources">
-      <h3>Resources</h3>
-      <p class="placeholder">Links, reading material and course resources.</p>
-    </section>
-
-    <section id="contact">
-      <h3>Contact</h3>
-      <p>Email: <span class="placeholder">professor@example.com</span></p>
-    </section>
-  </main>
-
-  <footer style="margin-top:2rem;border-top:1px solid #eee;padding-top:1rem;color:#666">
-    <small>Course website repository — replace this text with publishing notes (e.g. `gh-pages` branch).</small>
-  </footer>
+    <footer>
+      <small>Course website repository — replace this note with publishing details (branch: main or gh-pages).</small>
+    </footer>
+  </div>
 </body>
 </html>
