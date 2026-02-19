@@ -5,57 +5,203 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Taller de Modelos Matemáticos y de Datos - FIUBA</title>
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:2rem;color:#111}
-    header{border-bottom:1px solid #ddd;padding-bottom:1rem;margin-bottom:1rem}
-    nav a{margin-right:1rem}
-    .hero{background:#f7f7fb;padding:1rem;border-radius:8px}
-    .placeholder{color:#666;font-style:italic}
+    :root{--accent:#375aeb;--muted:#6b7280;--bg:#0f172a}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:0;color:#0b1220;background:#fff}
+    .container{max-width:1000px;margin:2rem auto;padding:0 1rem}
+    header{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .site-title{line-height:1}
+    .site-title h1{margin:0;font-size:1.25rem}
+    .site-title p{margin:0;color:var(--muted);font-size:0.95rem}
+    nav a{color:var(--accent);text-decoration:none;margin-left:1rem;font-weight:600}
+
+    .hero{display:flex;flex-direction:column;gap:0.5rem;background:linear-gradient(135deg,#f3f4ff 0%, #ffffff 100%);border-radius:12px;padding:1.25rem;margin:1.5rem 0}
+    .hero h2{margin:0;font-size:1.5rem}
+    .lead{color:#111;max-width:64ch}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:1.25rem}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+    .card{background:#fff;border:1px solid #eef2ff;padding:1rem;border-radius:10px}
+    .muted{color:var(--muted)}
+
+    .instructors{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+    @media (max-width:900px){.instructors{grid-template-columns:1fr}}
+    .instructor{background:linear-gradient(180deg,#fff,#fbfdff);padding:1rem;border-radius:10px;border:1px solid #e6eef9;display:flex;gap:0.75rem;align-items:flex-start}
+    .instructor img{width:72px;height:72px;border-radius:8px;object-fit:cover;border:1px solid #e9eef9}
+    .name{font-weight:700;margin-bottom:0.25rem}
+    .bio{font-size:0.95rem;color:#222}
+    .link{display:inline-block;margin-top:0.75rem;color:var(--accent);font-weight:600;text-decoration:none}
+
+    footer{margin-top:2rem;padding-top:1rem;border-top:1px solid #eee;color:var(--muted);font-size:0.9rem}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Taller de Modelos Matemáticos y de Datos</h1>
-    <p><strong>Facultad de Ingeniería, Universidad de Buenos Aires (FIUBA)</strong></p>
-    <nav>
-      <a href="index_en.html">English</a>
-      <a href="#syllabus">Programa</a>
-      <a href="#contact">Contacto</a>
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <div class="site-title">
+        <h1 data-i18n="site_title"></h1>
+        <p data-i18n="school_name"></p>
+      </div>
+      <nav>
+        <a id="lang-toggle" href="?lang=en"></a>
+        <a href="#syllabus" data-i18n="nav_syllabus"></a>
+        <a href="assets/docs/Syllabus.pdf" target="_blank" rel="noopener" data-i18n="nav_syllabus_pdf"></a>
+        <a href="#instructors" data-i18n="nav_instructors"></a>
+      </nav>
+    </header>
 
-  <main>
     <section class="hero">
-      <h2>Bienvenidos</h2>
-      <p class="placeholder">Descripción breve del curso (placeholder). Añade objetivos, público objetivo y una sinopsis aquí.</p>
+      <h2 data-i18n="hero_title"></h2>
+      <p class="lead" data-i18n="hero_lead"></p>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem">
+        <a href="#syllabus" class="link" data-i18n="hero_link_overview"></a>
+        <a href="#instructors" class="link" data-i18n="hero_link_instructors"></a>
+      </div>
     </section>
 
-    <section id="details">
-      <h3>Detalles del curso</h3>
-      <ul>
-        <li><strong>Código / Año:</strong> <span class="placeholder">[Poner código y año]</span></li>
-        <li><strong>Semestre:</strong> <span class="placeholder">[Poner semestre]</span></li>
-        <li><strong>Docente/s:</strong> <span class="placeholder">[Nombres de docentes]</span></li>
-      </ul>
+    <div class="grid">
+      <main>
+        <section id="syllabus" class="card">
+          <h3 data-i18n="overview_title"></h3>
+          <p data-i18n="overview_body"></p>
+          <h4 style="margin-top:1rem;font-size:1rem" data-i18n="topics_title"></h4>
+          <ul style="margin:0.5rem 0;padding-left:1.25rem">
+            <li data-i18n="topic_1"></li>
+            <li data-i18n="topic_2"></li>
+            <li data-i18n="topic_3"></li>
+            <li data-i18n="topic_4"></li>
+            <li data-i18n="topic_5"></li>
+            <li data-i18n="topic_6"></li>
+          </ul>
+          <h4 style="margin-top:1rem;font-size:1rem" data-i18n="deliverables_title"></h4>
+          <p class="muted" style="font-size:0.95rem" data-i18n="deliverables_body"></p>
+        </section>
+
+        <section id="resources" class="card" style="margin-top:1rem">
+          <h3 data-i18n="resources_title"></h3>
+          <p><a href="https://campusgrado.fi.uba.ar/course/view.php?id=994" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none" data-i18n="resources_campus_link"></a></p>
+        </section>
+
+        <section id="projects" class="card" style="margin-top:1rem">
+          <h3 data-i18n="projects_title"></h3>
+          <p style="margin-top:0.75rem;font-size:0.95rem" data-i18n-html="project_trust_title"></p>
+          <p style="margin:0.5rem 0;font-size:0.9rem" data-i18n="project_trust_desc"></p>
+          <p style="margin:0.5rem 0;font-size:0.9rem" data-i18n-html="project_trust_links"></p>
+          <p style="margin:0.5rem 0;font-size:0.9rem" data-i18n-html="project_trust_award"></p>
+
+          <p style="margin-top:1rem;margin-bottom:0.5rem;font-size:0.95rem" data-i18n-html="project_tracking_title"></p>
+          <p style="margin:0.5rem 0;font-size:0.9rem" data-i18n-html="project_tracking_desc"></p>
+
+          <p style="margin-top:1rem;margin-bottom:0.5rem;font-size:0.95rem" data-i18n-html="project_crowdstream_title"></p>
+          <p style="margin:0.5rem 0;font-size:0.9rem" data-i18n-html="project_crowdstream_desc"></p>
+
+          <p style="margin-top:1rem;margin-bottom:0.5rem;font-size:0.95rem;font-family:'Courier New',monospace" data-i18n-html="project_facells_title"></p>
+          <p style="margin:0.5rem 0;font-size:0.9rem" data-i18n-html="project_facells_desc"></p>
+        </section>
+      </main>
+
+      <aside>
+        <div class="card">
+          <h4 data-i18n="course_details_title"></h4>
+          <p style="margin:0.5rem 0;font-size:0.95rem">
+            <strong>Seminario de Ingeniería Industrial II</strong><br/>
+            <span class="muted" data-i18n="course_code_label"></span> 9216
+          </p>
+          <p style="margin:0.5rem 0;font-size:0.95rem">
+            <a href="assets/docs/Syllabus.pdf" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none" data-i18n="course_syllabus_link"></a>
+          </p>
+          <p style="margin:0.5rem 0;font-size:0.95rem">
+            <span class="muted" data-i18n="course_schedule_label"></span><br/>
+            <span data-i18n="course_schedule_value"></span>
+          </p>
+          <p style="margin:0.5rem 0;font-size:0.95rem">
+            <span class="muted" data-i18n="course_format_label"></span><br/>
+            <span data-i18n-html="course_format_value"></span>
+          </p>
+          <h4 style="margin-top:1rem" data-i18n="contact_title"></h4>
+          <p class="muted"><span data-i18n="contact_label"></span> <a href="mailto:xgonzalez@fi.uba.ar" style="color:var(--accent);text-decoration:none">xgonzalez@fi.uba.ar</a></p>
+        </div>
+        <div class="card" style="margin-top:1rem">
+          <img id="sidebar-img" src="assets/images/karma.jpeg" alt="" style="width:100%;border-radius:8px;border:1px solid #e9eef9">
+          <p class="muted" style="font-size:0.85rem;margin-top:0.5rem" data-i18n-html="sidebar_image_caption"></p>
+        </div>
+      </aside>
+    </div>
+
+    <section id="instructors" style="margin-top:1.5rem">
+      <h3 data-i18n="instructors_title"></h3>
+      <div class="instructors">
+        <div class="instructor">
+          <img src="assets/images/xavier.jpeg" alt="Xavier González">
+          <div>
+            <div class="name">Xavier González</div>
+            <div class="bio" data-i18n="instructor_xavier_bio"></div>
+            <a class="link" href="https://www.linkedin.com/in/xavierign/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="instructor">
+          <img src="assets/images/hernan.jpeg" alt="Hernan Ordiales">
+          <div>
+            <div class="name">Hernan Ordiales</div>
+            <div class="bio" data-i18n="instructor_hernan_bio"></div>
+            <a class="link" href="https://www.linkedin.com/in/hordia/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="instructor">
+          <img src="assets/images/juan.jpeg" alt="Juan Cruz Camacho">
+          <div>
+            <div class="name">Juan Cruz Camacho</div>
+            <div class="bio" data-i18n="instructor_juan_bio"></div>
+            <a class="link" href="https://www.linkedin.com/in/juancruzcamacho/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="syllabus">
-      <h3>Programa (resumen)</h3>
-      <p class="placeholder">Sección con lista de temas, evaluaciones y cronograma. Reemplazar con el contenido real del programa.</p>
-    </section>
+    <footer>
+      <small data-i18n="footer_text"></small>
+    </footer>
+  </div>
 
-    <section id="resources">
-      <h3>Recursos</h3>
-      <p class="placeholder">Enlaces, material de lectura y recursos del curso.</p>
-    </section>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var lang = params.get('lang')
+        || localStorage.getItem('lang')
+        || (navigator.language && navigator.language.startsWith('en') ? 'en' : 'es');
 
-    <section id="contact">
-      <h3>Contacto</h3>
-      <p>Email: <span class="placeholder">profesor@example.com</span></p>
-    </section>
-  </main>
+      if (lang !== 'en' && lang !== 'es') lang = 'es';
+      localStorage.setItem('lang', lang);
 
-  <footer style="margin-top:2rem;border-top:1px solid #eee;padding-top:1rem;color:#666">
-    <small>Repositorio de la página del curso — reemplaza este texto con notas de publicación o branch (ej. `gh-pages`).</small>
-  </footer>
+      document.documentElement.lang = lang;
+
+      fetch('translations.json')
+        .then(function (r) { return r.json(); })
+        .then(function (t) {
+          var strings = t[lang];
+
+          document.querySelectorAll('[data-i18n]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n');
+            if (strings[key] !== undefined) el.textContent = strings[key];
+          });
+
+          document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n-html');
+            if (strings[key] !== undefined) el.innerHTML = strings[key];
+          });
+
+          var toggle = document.getElementById('lang-toggle');
+          toggle.href = strings['nav_language_href'];
+          toggle.textContent = strings['nav_language'];
+
+          var sidebarImg = document.getElementById('sidebar-img');
+          sidebarImg.alt = strings['sidebar_image_alt'];
+
+          document.title = strings['site_title'] + ' - FIUBA';
+        });
+    })();
+  </script>
 </body>
 </html>
