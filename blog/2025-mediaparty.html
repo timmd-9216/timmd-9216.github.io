@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MediaParty 2025 - FIUBA</title>
+  <style>
+    :root{--accent:#375aeb;--muted:#6b7280;--bg:#0f172a}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:0;color:#0b1220;background:#fff}
+    .container{max-width:1000px;margin:2rem auto;padding:0 1rem}
+    header{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .site-title{line-height:1}
+    .site-title h1{margin:0;font-size:1.25rem}
+    .site-title p{margin:0;color:var(--muted);font-size:0.95rem}
+    nav a{color:var(--accent);text-decoration:none;margin-left:1rem;font-weight:600}
+
+    .hero{display:flex;flex-direction:column;gap:0.5rem;background:linear-gradient(135deg,#f3f4ff 0%, #ffffff 100%);border-radius:12px;padding:1.25rem;margin:1.5rem 0}
+    .hero h2{margin:0;font-size:1.5rem}
+    .post-date{color:var(--muted);font-size:0.9rem;margin:0.25rem 0 0}
+    .lead{color:#111;max-width:64ch}
+
+    .card{background:#fff;border:1px solid #eef2ff;padding:1rem;border-radius:10px;margin-top:1rem}
+    .muted{color:var(--muted)}
+
+    /* Add image styles as needed */
+    .post-image{width:100%;border-radius:8px;border:1px solid #e9eef9;margin:1rem 0}
+
+    footer{margin-top:2rem;padding-top:1rem;border-top:1px solid #eee;color:var(--muted);font-size:0.9rem}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="site-title">
+        <h1 data-i18n="mediaparty_title"></h1>
+        <p data-i18n="school_name"></p>
+      </div>
+      <nav>
+        <a href="index.html" data-i18n="nav_home_blog"></a>
+        <a href="../index.html" data-i18n="nav_home"></a>
+        <a id="lang-toggle" href="?lang=en"></a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2 data-i18n="mediaparty_title"></h2>
+      <p class="post-date" data-i18n="mediaparty_date"></p>
+      <p class="lead" data-i18n="mediaparty_lead"></p>
+    </section>
+
+    <!-- Add a cover image here if available:
+    <img class="post-image" src="../assets/images/blog/2025-mediaparty/cover.jpg" alt="">
+    -->
+
+    <div class="card">
+      <p data-i18n="mediaparty_body_1"></p>
+      <p data-i18n="mediaparty_body_2"></p>
+      <p data-i18n="mediaparty_body_3"></p>
+    </div>
+
+    <!-- Add more .card blocks for additional sections, images, code snippets, etc. -->
+
+    <footer>
+      <small data-i18n="footer_text"></small>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var lang = params.get('lang')
+        || localStorage.getItem('lang')
+        || (navigator.language && navigator.language.startsWith('en') ? 'en' : 'es');
+
+      if (lang !== 'en' && lang !== 'es') lang = 'es';
+      localStorage.setItem('lang', lang);
+
+      document.documentElement.lang = lang;
+
+      fetch('../blog/translations.json')
+        .then(function (r) { return r.json(); })
+        .then(function (t) {
+          var strings = t[lang];
+
+          document.querySelectorAll('[data-i18n]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n');
+            if (strings[key] !== undefined) el.textContent = strings[key];
+          });
+
+          document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n-html');
+            if (strings[key] !== undefined) el.innerHTML = strings[key];
+          });
+
+          var toggle = document.getElementById('lang-toggle');
+          toggle.href = strings['nav_language_href'];
+          toggle.textContent = strings['nav_language'];
+
+          document.title = strings['mediaparty_title'] + ' - FIUBA';
+        });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "es": {
+    "nav_home": "← Inicio",
+    "nav_home_blog": "← Blog",
+    "nav_language": "English",
+    "nav_language_href": "?lang=en",
+    "school_name": "Facultad de Ingeniería, Universidad de Buenos Aires (FIUBA)",
+    "footer_text": "Sitio del curso (GitHub Pages): https://timmd-9216.github.io",
+
+    "blog_index_title": "Blog",
+    "blog_index_lead": "Entradas sobre análisis de datos, modelado matemático y proyectos del taller.",
+
+    "mediaparty_title": "Hackathon MediaParty 2025: cómo construimos Trust",
+    "mediaparty_date": "Julio 2025",
+    "mediaparty_lead": "Cómo nuestro equipo diseñó, construyó y ganó el primer premio del Hackathon MediaParty 2025 con un verificador de calidad periodística basado en LLM.",
+    "mediaparty_body_1": "El Hackathon MediaParty 2025 reunió a equipos de todo el mundo para construir herramientas de periodismo digital en 48 horas. Nuestro equipo eligió abordar el problema de la desinformación desde el ángulo de la calidad: en lugar de detectar noticias falsas, decidimos ayudar a los lectores a evaluar la calidad de cualquier artículo.",
+    "mediaparty_body_2": "El sistema Trust combina un pipeline de NLP clásico con llamadas a modelos de lenguaje grandes (LLM) para evaluar dimensiones como objetividad, verificación de fuentes, claridad y estructura. El resultado es un puntaje detallado con explicaciones en lenguaje natural.",
+    "mediaparty_body_3": "Al final del hackathon, Trust fue seleccionado como primer premio por el jurado compuesto por representantes del Banco Mundial, Internet Society, Fundación Avina y FUNDAR."
+  },
+  "en": {
+    "nav_home": "← Home",
+    "nav_home_blog": "← Blog",
+    "nav_language": "Español",
+    "nav_language_href": "?lang=es",
+    "school_name": "School of Engineering, University of Buenos Aires (FIUBA)",
+    "footer_text": "Course site (GitHub Pages): https://timmd-9216.github.io",
+
+    "blog_index_title": "Blog",
+    "blog_index_lead": "Posts on data analysis, mathematical modeling, and workshop projects.",
+
+    "mediaparty_title": "MediaParty Hackathon 2025: how we built Trust",
+    "mediaparty_date": "July 2025",
+    "mediaparty_lead": "How our team designed, built, and won first prize at the MediaParty Hackathon 2025 with an LLM-powered journalism quality checker.",
+    "mediaparty_body_1": "The MediaParty Hackathon 2025 brought together teams from around the world to build digital journalism tools in 48 hours. Our team chose to tackle misinformation from a quality angle: instead of detecting fake news, we decided to help readers evaluate the quality of any given article.",
+    "mediaparty_body_2": "The Trust system combines a classic NLP pipeline with large language model (LLM) calls to evaluate dimensions such as objectivity, source verification, clarity, and structure. The result is a detailed score with natural language explanations.",
+    "mediaparty_body_3": "At the end of the hackathon, Trust was selected as first prize winner by a jury composed of representatives from The World Bank, Internet Society, Fundación Avina and FUNDAR."
+  }
+}
