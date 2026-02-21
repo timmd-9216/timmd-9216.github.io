@@ -33,6 +33,10 @@
     .link{display:inline-block;margin-top:0.75rem;color:var(--accent);font-weight:600;text-decoration:none}
 
     footer{margin-top:2rem;padding-top:1rem;border-top:1px solid #eee;color:var(--muted);font-size:0.9rem}
+
+    .announcement-banner{background:#fff8e1;border:1px solid #ffe082;border-left:4px solid #f9a825;border-radius:6px;padding:0.75rem 1.25rem;margin:0 0 1rem;display:flex;align-items:center;gap:1rem;font-size:0.95rem}
+    .announcement-cta{white-space:nowrap;color:var(--accent);font-weight:600;text-decoration:none}
+    .announcement-cta:hover{text-decoration:underline}
   </style>
 </head>
 <body>
@@ -59,6 +63,13 @@
         <a href="#instructors" class="link" data-i18n="hero_link_instructors"></a>
       </div>
     </section>
+
+    <!-- ANUNCIO INICIO DE CLASES — comentar este bloque para desactivar -->
+    <div class="announcement-banner">
+      <span data-i18n="announcement_text"></span>
+      <a href="anuncio.html" data-i18n="announcement_link" class="announcement-cta"></a>
+    </div>
+    <!-- /ANUNCIO -->
 
     <div class="grid">
       <main>

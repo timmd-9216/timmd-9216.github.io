@@ -55,7 +55,19 @@
     "instructor_xavier_bio": "Especialista en resolución de problemas con IA, combinando ciencia de datos, IA generativa y sistemas creativos. Senior Data Scientist con sólida formación académica (PhD) y liderazgo práctico en GenAI, análisis de redes sociales y productos potenciados por IA. Reconocido por conectar el modelado riguroso con el impacto real, desde sistemas a escala empresarial hasta arte experimental y tecnología musical.",
     "instructor_hernan_bio": "Líder experimentado en tecnología e innovación con amplia experiencia en transformar ideas complejas en soluciones escalables y aplicables al mundo real. Fuerte enfoque en transformación digital, estrategia de datos y liderazgo transversal, conectando negocios, ingeniería y analítica con claridad y capacidad de ejecución.",
     "instructor_juan_bio": "Especialista full-stack en datos y visualización, apasionado por convertir datos complejos en insights claros y atractivos. Sólida trayectoria en analítica, dashboards y sistemas visuales interactivos, con ojo para el diseño y la narrativa que hace que los datos sean útiles y cautivadores.",
-    "footer_text": "Sitio del curso (GitHub Pages): https://timmd-9216.github.io"
+    "footer_text": "Sitio del curso (GitHub Pages): https://timmd-9216.github.io",
+    "announcement_text": "📢 Inicio de clases — 1er cuatrimestre 2026:",
+    "announcement_link": "Ver mensaje completo →",
+    "anuncio_page_title": "Inicio de clases 2026 — 92.16",
+    "anuncio_back": "← Inicio",
+    "anuncio_title": "Inicio de clases — 1er cuatrimestre 2026",
+    "anuncio_intro": "<strong>92.16 - Taller de Investigación con Modelización Matemática y Datos</strong> (ex Seminario de Ing. Industrial II).<br/><br/><ul style=\"margin:0.5rem 0;padding-left:1.25rem\"><li>Materia optativa de 2 créditos de la carrera de Ingeniería Industrial</li><li>Cursada es principalmente virtual los lunes de 17 a 19</li><li>Modalidad de taller, donde el principal objetivo es trabajar en proyectos vinculados a ciencia de datos y modelos con textos, audios / música, chatbots, video, etc.</li></ul>",
+    "anuncio_para_quien_title": "¿Para quién es la materia?",
+    "anuncio_para_quien": "Si les interesa participar en proyectos usando herramientas de AI (procesando textos, audios, imágenes) o tienen pensado hacer una tesis como trabajo final de la carrera los invitamos a participar en el taller el primer cuatrimestre de este año. También creemos que el taller puede ser muy positivo si tienen ideas para llevar adelante una aplicación o emprendimiento propio.",
+    "anuncio_proyectos": "Desde el año pasado trabajamos en proyectos vinculados al trabajo con textos, audios y video. El proyecto Trust, por ejemplo, permite el análisis automático de artículos periodísticos y fue presentado en la Media Party y ganador de su hackaton en 2025. Actualmente estamos aplicando las mismas técnicas de análisis de textos en datos de redes sociales. Por otro lado, con Crowdstream investigamos la posibilidad de hacer mezcla de música guiada por la respuesta del público. Además trabajamos con herramientas como n8n para la creación de chatbots y agentes. Les dejo una presentación con más detalle de la materia. Si conocen a alguien que le pueda interesar se agradece la difusión.",
+    "anuncio_guarani": "Estamos al tanto de que a los estudiantes del nuevo plan puede que no les aparezca la materia para inscribirse en el SIU Guaraní. En ese caso pueden sumarse directamente a la primera clase, no habrá inconvenientes para que obtengan los créditos al finalizar la cursada. Recomendamos haber cursado Investigación Operativa y/o Estadística Aplicada pero no es condición necesaria.",
+    "anuncio_links_title": "Links relevantes",
+    "anuncio_cierre": "Si tienen consultas o quieren saber más pueden participar de la primera clase el <strong>9 de marzo a las 17hs</strong> en el Meet adjunto! También pueden escribir a jcamacho@fi.uba.ar."
   },
   "en": {
     "site_title": "Research and Mathematical Models Workshop",
@@ -113,6 +125,18 @@
     "instructor_xavier_bio": "AI-driven problem solver blending data science, generative AI, and creative systems. Senior Data Scientist with a strong academic backbone (PhD) and hands-on leadership in GenAI, social media analysis, and AI-powered products. Known for connecting rigorous modeling with real-world impact — from enterprise-scale systems to experimental art and music tech.",
     "instructor_hernan_bio": "Seasoned technology and innovation leader with deep experience turning complex ideas into scalable, real-world solutions. Strong focus on digital transformation, data strategy, and cross-functional leadership, bridging business, engineering, and analytics with clarity and execution.",
     "instructor_juan_bio": "Full-stack data and visualization specialist passionate about turning messy data into clear, compelling insights. Strong background in analytics, dashboards, and interactive visual systems, with an eye for design and storytelling that makes data both useful and engaging.",
-    "footer_text": "Course site (GitHub Pages): https://timmd-9216.github.io/index_en.html"
+    "footer_text": "Course site (GitHub Pages): https://timmd-9216.github.io/index_en.html",
+    "announcement_text": "📢 Classes starting — Q1 2026:",
+    "announcement_link": "Read the full message →",
+    "anuncio_page_title": "Classes starting 2026 — 92.16",
+    "anuncio_back": "← Home",
+    "anuncio_title": "Classes starting — Q1 2026",
+    "anuncio_intro": "<strong>92.16 - Research Workshop on Mathematical Modeling and Data</strong> (formerly Industrial Engineering Seminar II).<br/><br/><ul style=\"margin:0.5rem 0;padding-left:1.25rem\"><li>Elective course worth 2 credits in the Industrial Engineering program</li><li>Mostly virtual, Mondays 17:00–19:00</li><li>Workshop format focused on data science projects involving text, audio/music, chatbots, video, and more</li></ul>",
+    "anuncio_para_quien_title": "Who is this course for?",
+    "anuncio_para_quien": "If you are interested in working on projects using AI tools (processing text, audio, or images), or are planning a thesis as your final degree project, we invite you to join the workshop this first semester. We also think the workshop can be very valuable if you have ideas for an application or startup of your own.",
+    "anuncio_proyectos": "Over the past year we have worked on projects involving text, audio, and video. The Trust project, for example, enables automated analysis of journalistic articles and was presented at Media Party, winning the 2025 hackathon. We are currently applying the same text analysis techniques to social media data. With Crowdstream, we explored audience-driven music mixing. We also work with tools like n8n for building chatbots and agents. I have attached a presentation with more details about the course — if you know someone who might be interested, please share.",
+    "anuncio_guarani": "We are aware that students on the new curriculum may not see the course listed in SIU Guaraní for enrollment. In that case, you are welcome to join the first class directly — there will be no issues obtaining your credits at the end of the semester. We recommend having taken Operations Research and/or Applied Statistics, though this is not a strict prerequisite.",
+    "anuncio_links_title": "Useful links",
+    "anuncio_cierre": "If you have questions or want to learn more, join the first class on <strong>March 9 at 17:00</strong> via the Meet link below! You can also reach out by email to jcamacho@fi.uba.ar."
   }
 }
