@@ -88,3 +88,6 @@ Keys are namespaced by slug: `trust_title`, `trust_lead`, `mediaparty_body_1`, e
   - Projects: `fetch('../projects/translations.json')`
   - Blog: `fetch('../blog/translations.json')`
 - Never add external CSS or JS files
+
+# Rules
+- IMPORTANT: When adding new text, always add it to both `"es"` and `"en"` in the relevant `translations.json`.
