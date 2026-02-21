@@ -1,0 +1,68 @@
+{
+  "es": {
+    "nav_home": "← Inicio",
+    "nav_language": "English",
+    "nav_language_href": "?lang=en",
+    "school_name": "Facultad de Ingeniería, Universidad de Buenos Aires (FIUBA)",
+    "footer_text": "Sitio del curso (GitHub Pages): https://timmd-9216.github.io",
+
+    "projects_index_title": "Proyectos",
+    "projects_index_lead": "Investigaciones, herramientas y sistemas desarrollados por los estudiantes del taller.",
+    "projects_read_more": "Ver proyecto →",
+
+    "trust_card_title": "Trust — 🛡️",
+    "trust_card_desc": "Verificador de calidad periodística basado en NLP y LLM. Ganador del Hackathon MediaParty 2025.",
+
+    "tracking_card_title": "Seguimiento Político — 🔎",
+    "tracking_card_desc": "Monitoreo y análisis de la presencia y discurso de figuras políticas en redes sociales.",
+
+    "crowdstream_card_title": "CrowdStream — 🎛️",
+    "crowdstream_card_desc": "Sistema de mezcla musical en tiempo real basado en IA, combinando control algorítmico con señales de interacción en vivo.",
+
+    "facells_card_title": "FaCells — 🖼️",
+    "facells_card_desc": "Proyecto de arte con IA que traduce rasgos faciales humanos en dibujos abstractos mediante machine learning.",
+
+    "trust_page_title": "Trust — Verificador de calidad periodística",
+    "trust_lead": "Una herramienta inteligente para analizar la calidad del contenido periodístico, combinando NLP con métricas basadas en LLM.",
+    "trust_body_1": "Desarrollado en el marco del Hackathon MediaParty 2025, Trust evalúa la credibilidad y objetividad de artículos periodísticos utilizando modelos de lenguaje de última generación.",
+    "trust_body_2": "El sistema combina procesamiento de lenguaje natural (NLP) con métricas específicas del dominio periodístico para ofrecer un puntaje de calidad detallado, identificando sesgos, verificando fuentes y evaluando la estructura del artículo.",
+    "trust_links_title": "Enlaces",
+    "trust_links_html": "<a href=\"https://hackdash.org/projects/68dd4b82f23e470f557fa1e2\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--accent)\">Hackdash</a> · <a href=\"https://github.com/timmd-9216/trust-engine-v2\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--accent)\">GitHub</a> · <a href=\"https://mediaparty.org/hackaton-2025\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--accent)\">MediaParty 2025</a>",
+    "trust_award": "🏆 Primer premio — Hackathon MediaParty 2025",
+    "trust_partners_title": "Colaboración",
+    "trust_partners_html": "Desarrollado en colaboración con <a href=\"https://www.desconfio.org/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--accent)\">Desconfío</a>. Patrocinado por el Banco Mundial, Internet Society, Fundación Avina y FUNDAR."
+  },
+  "en": {
+    "nav_home": "← Home",
+    "nav_language": "Español",
+    "nav_language_href": "?lang=es",
+    "school_name": "School of Engineering, University of Buenos Aires (FIUBA)",
+    "footer_text": "Course site (GitHub Pages): https://timmd-9216.github.io",
+
+    "projects_index_title": "Projects",
+    "projects_index_lead": "Research, tools, and systems developed by workshop students.",
+    "projects_read_more": "View project →",
+
+    "trust_card_title": "Trust — 🛡️",
+    "trust_card_desc": "NLP and LLM-powered journalism quality checker. Winner of the MediaParty Hackathon 2025.",
+
+    "tracking_card_title": "Political Tracking — 🔎",
+    "tracking_card_desc": "Monitoring and analysis of political figures' presence and discourse across social media platforms.",
+
+    "crowdstream_card_title": "CrowdStream — 🎛️",
+    "crowdstream_card_desc": "AI-based real-time music mixing system, combining algorithmic control with live interaction signals.",
+
+    "facells_card_title": "FaCells — 🖼️",
+    "facells_card_desc": "AI art project that translates human facial features into abstract drawings using machine learning.",
+
+    "trust_page_title": "Trust — Journalism Quality Checker",
+    "trust_lead": "An intelligent tool for analyzing the quality of journalistic content, combining NLP with LLM-powered metrics.",
+    "trust_body_1": "Built during the MediaParty Hackathon 2025, Trust evaluates the credibility and objectivity of journalistic articles using state-of-the-art language models.",
+    "trust_body_2": "The system combines natural language processing (NLP) with journalism-specific metrics to produce a detailed quality score, identifying biases, verifying sources, and evaluating article structure.",
+    "trust_links_title": "Links",
+    "trust_links_html": "<a href=\"https://hackdash.org/projects/68dd4b82f23e470f557fa1e2\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--accent)\">Hackdash</a> · <a href=\"https://github.com/timmd-9216/trust-engine-v2\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--accent)\">GitHub</a> · <a href=\"https://mediaparty.org/hackaton-2025\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--accent)\">MediaParty 2025</a>",
+    "trust_award": "🏆 First prize — MediaParty Hackathon 2025",
+    "trust_partners_title": "Partners",
+    "trust_partners_html": "Developed in partnership with <a href=\"https://www.desconfio.org/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--accent)\">Desconfío</a>. Sponsored by The World Bank, Internet Society, Fundación Avina and FUNDAR."
+  }
+}

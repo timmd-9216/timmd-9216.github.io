@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proyectos - FIUBA</title>
+  <style>
+    :root{--accent:#375aeb;--muted:#6b7280;--bg:#0f172a}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;margin:0;color:#0b1220;background:#fff}
+    .container{max-width:1000px;margin:2rem auto;padding:0 1rem}
+    header{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .site-title{line-height:1}
+    .site-title h1{margin:0;font-size:1.25rem}
+    .site-title p{margin:0;color:var(--muted);font-size:0.95rem}
+    nav a{color:var(--accent);text-decoration:none;margin-left:1rem;font-weight:600}
+
+    .hero{display:flex;flex-direction:column;gap:0.5rem;background:linear-gradient(135deg,#f3f4ff 0%, #ffffff 100%);border-radius:12px;padding:1.25rem;margin:1.5rem 0}
+    .hero h2{margin:0;font-size:1.5rem}
+    .lead{color:#111;max-width:64ch}
+
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1rem}
+    @media(max-width:600px){.project-grid{grid-template-columns:1fr}}
+
+    .project-card{background:#fff;border:1px solid #eef2ff;padding:1.25rem;border-radius:10px;display:flex;flex-direction:column;gap:0.5rem}
+    .project-card h3{margin:0;font-size:1.05rem}
+    .project-card p{margin:0;font-size:0.9rem;color:#444;flex:1}
+    .link{display:inline-block;margin-top:0.75rem;color:var(--accent);font-weight:600;text-decoration:none;font-size:0.9rem}
+
+    footer{margin-top:2rem;padding-top:1rem;border-top:1px solid #eee;color:var(--muted);font-size:0.9rem}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="site-title">
+        <h1 data-i18n="projects_index_title"></h1>
+        <p data-i18n="school_name"></p>
+      </div>
+      <nav>
+        <a href="../index.html" data-i18n="nav_home"></a>
+        <a id="lang-toggle" href="?lang=en"></a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2 data-i18n="projects_index_title"></h2>
+      <p class="lead" data-i18n="projects_index_lead"></p>
+    </section>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h3 data-i18n="trust_card_title"></h3>
+        <p data-i18n="trust_card_desc"></p>
+        <a class="link" href="trust.html" data-i18n="projects_read_more"></a>
+      </div>
+
+      <div class="project-card">
+        <h3 data-i18n="tracking_card_title"></h3>
+        <p data-i18n="tracking_card_desc"></p>
+        <!-- <a class="link" href="tracking.html" data-i18n="projects_read_more"></a> -->
+      </div>
+
+      <div class="project-card">
+        <h3 data-i18n="crowdstream_card_title"></h3>
+        <p data-i18n="crowdstream_card_desc"></p>
+        <!-- <a class="link" href="crowdstream.html" data-i18n="projects_read_more"></a> -->
+      </div>
+
+      <div class="project-card">
+        <h3 data-i18n="facells_card_title"></h3>
+        <p data-i18n="facells_card_desc"></p>
+        <!-- <a class="link" href="facells.html" data-i18n="projects_read_more"></a> -->
+      </div>
+
+      <!-- Template for a new project card — copy, uncomment link when page is ready:
+      <div class="project-card">
+        <h3 data-i18n="myproject_card_title"></h3>
+        <p data-i18n="myproject_card_desc"></p>
+        <a class="link" href="myproject.html" data-i18n="projects_read_more"></a>
+      </div>
+      -->
+
+    </div>
+
+    <footer>
+      <small data-i18n="footer_text"></small>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var lang = params.get('lang')
+        || localStorage.getItem('lang')
+        || (navigator.language && navigator.language.startsWith('en') ? 'en' : 'es');
+
+      if (lang !== 'en' && lang !== 'es') lang = 'es';
+      localStorage.setItem('lang', lang);
+
+      document.documentElement.lang = lang;
+
+      fetch('../projects/translations.json')
+        .then(function (r) { return r.json(); })
+        .then(function (t) {
+          var strings = t[lang];
+
+          document.querySelectorAll('[data-i18n]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n');
+            if (strings[key] !== undefined) el.textContent = strings[key];
+          });
+
+          document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n-html');
+            if (strings[key] !== undefined) el.innerHTML = strings[key];
+          });
+
+          var toggle = document.getElementById('lang-toggle');
+          toggle.href = strings['nav_language_href'];
+          toggle.textContent = strings['nav_language'];
+
+          document.title = strings['projects_index_title'] + ' - FIUBA';
+        });
+    })();
+  </script>
+</body>
+</html>
